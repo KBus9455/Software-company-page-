@@ -216,10 +216,7 @@ main.support {
   height: 50px;
   margin: 10px;
 }
-.active {
-  left: 0%;
-  z-index: 100;
-}
+
 i.fa-solid.fa-bars {
   display: none;
 }
@@ -236,11 +233,19 @@ i.fa-solid.fa-bars {
   }
   header nav ul {
     flex-direction: column;
+  }
+  header nav {
     background-color: white;
+    width: 100%;
+    height: 100%;
     z-index: 100;
     position: fixed;
-    left: -100%;
     top: 15vh;
+    left: -100%;
+    transition: 0.3s;
+  }
+  nav.active {
+    left: 0%;
   }
   .logo {
     position: fixed;
