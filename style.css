@@ -216,3 +216,70 @@ main.support {
   height: 50px;
   margin: 10px;
 }
+.active {
+  left: 0%;
+  z-index: 100;
+}
+i.fa-solid.fa-bars {
+  display: none;
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .wrapper {
+    width: 100vh;
+    height: auto;
+  }
+  i.fa-solid.fa-bars {
+    display: inline-block;
+  }
+  header {
+    height: 15vh;
+  }
+  header nav ul {
+    flex-direction: column;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    left: -100%;
+    top: 15vh;
+  }
+  .logo {
+    position: fixed;
+    line-height: 15vh;
+    top: 1%;
+    left: 5%;
+  }
+  .logo span {
+    display: inline-block;
+    width: 10px;
+  }
+  main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  #carouselExampleControls {
+    max-height: 100%;
+    z-index: -1;
+  }
+  #carouselExampleControls img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .mainText {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .carousel-cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
