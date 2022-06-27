@@ -3,288 +3,130 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.ourProductsList,
-.aboutUsList {
-  display: none;
-}
-
-.wrapper {
-  max-width: 100vh;
-  max-width: 1440px;
-  height: 100vh;
-  margin: 0 auto;
-  font-family: 'Epilogue', sans-serif;
-}
-
 header {
-  height: 10%;
-}
-header nav ul {
-  display: flex;
-}
-main {
-  height: 90%;
+  height: 15vh;
   overflow: hidden;
-  position: relative;
+}
+.wrapper {
+  width: 100vw;
+}
+
+main.container-fluid {
+  padding: 0;
 }
 #carouselExampleControls {
-  max-height: 100%;
+  width: 100vw;
+  height: 85vh;
 }
-
-.mainText {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 4.5rem;
-  font-weight: 700;
-}
-.carousel-cover {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+#carouselExampleControls div,
+#carouselExampleControls div img {
   height: 100%;
+  object-fit: cover;
 }
 
-.menu-top {
-  list-style: none;
-  line-height: 10vh;
-  width: 80%;
-  justify-content: space-between;
-}
 .menu-top a {
   text-decoration: none;
   color: black;
   transition: 300ms;
 }
-.menu-top a:hover {
-  border-bottom: 1px solid black;
-}
 .logo {
   font-weight: 700;
   font-size: 2rem;
+  line-height: 15vh;
+  margin-left: 20px;
 }
-.products {
-  margin-top: 100px;
-  margin: auto;
-  width: 90%;
+.logo span {
+  display: inline-block;
+  width: 10px;
+}
+header nav.active {
+  left: 0%;
+}
+header nav {
+  background-color: white;
+  width: 70%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  z-index: 10;
+  position: fixed;
+  top: 15vh;
+  left: -100%;
+  transition: 0.3s;
 }
-.products div.item {
-  width: 50%;
-  flex-direction: row;
-  display: flex;
-  align-items: center;
+header nav li {
+  padding: 20px;
 }
-.products .description {
-  width: 90%;
+.menu-top {
+  list-style: none;
 }
-
-.products div.item img {
-  width: 90%;
-  border-radius: 20px;
-  transition: 0.5s;
-}
-.products div.item img:hover,
-.aboutUsItem div img:hover {
-  transform: scale(1.05);
-}
-.products h1 {
-  font-size: 1rem;
-}
-.products p {
-  font-size: 0.8rem;
-}
-main.aboutUs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.aboutUsItem {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-}
-.aboutUsItem div {
-  width: 50%;
-  display: flex;
-}
-.aboutUsItem div:nth-child(even) {
-  justify-content: left;
-}
-.aboutUsItem div:nth-child(odd) {
-  justify-content: right;
-  margin-right: 4rem;
-}
-.aboutUsItem p {
-  font-size: 0.85em;
-  width: 70%;
-}
-
-.aboutUsItem div img {
-  width: 70%;
-  border-radius: 20px;
-  transition: 0.5s;
-}
-main.careers {
+.carousel-cover {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.careers table {
-  width: 70%;
-}
-.careers tr,
-.careers td {
-  padding: 0.5rem;
-  text-align: center;
-  width: 30%;
-  transition: 100ms;
-}
-.careers tr:hover {
-  background-color: rgb(147, 147, 147);
-  color: white;
-}
-.careers h1 {
-  font-size: 2rem;
-  padding: 1rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.careers img {
-  height: 30vh;
-  border-radius: 20px;
-}
-
-main.support {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-.support .map {
-  margin: 10px auto;
-  width: 60%;
-}
-.map iframe {
-  width: 100%;
-  height: 35vh;
-  border-radius: 20px;
-}
-.support form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-.support form input,
-.support form textarea {
-  width: 100%;
-}
-.support form textarea {
-  height: 10vh;
-}
-.support button {
-  margin: 10px auto;
-}
-.support form input,
-.support form textarea {
-  margin: 0.6rem auto;
-}
-.socials {
+  height: 85vh;
   margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 10vh;
 }
-.socials img {
-  height: 50px;
-  margin: 10px;
+.mainText {
+  position: absolute;
+  top: 30vh;
+  left: 2%;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 700;
 }
 
-i.fa-solid.fa-bars {
-  display: none;
-}
-@media screen and (max-width: 992px) and (orientation: portrait) {
-  .wrapper {
-    width: 100vh;
-    height: auto;
-  }
-  i.fa-solid.fa-bars {
-    display: inline-block;
-  }
-  header {
-    height: 15vh;
-  }
-  header nav ul {
-    flex-direction: column;
-  }
-  header nav {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    position: fixed;
-    top: 15vh;
-    left: -100%;
-    transition: 0.3s;
-  }
-  nav.active {
-    left: 0%;
-  }
+@media (min-width: 768px) and (orientation: portrait) {
   .logo {
-    position: fixed;
-    line-height: 15vh;
-    top: 1%;
-    left: 5%;
-  }
-  .logo span {
-    display: inline-block;
-    width: 10px;
-  }
-  main {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  #carouselExampleControls {
-    max-height: 100%;
-    z-index: -1;
-  }
-  #carouselExampleControls img {
-    height: 100vh;
-    object-fit: cover;
+    font-size: 3rem;
   }
 
   .mainText {
-    position: absolute;
-    top: 40%;
-    left: 2%;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 4rem;
   }
-  .carousel-cover {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
+  .menu-top a {
+    font-size: 1.5rem;
+  }
+  header nav {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 1440px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .mainText {
+    font-size: 4rem;
+  }
+  header nav {
+    position: static;
+    height: 15vh;
+    width: 80%;
+  }
+  .logo i {
+    display: none;
+  }
+  .logo {
+    width: 20%;
+  }
+  header nav ul {
+    display: flex;
     width: 100%;
-    height: 100%;
+    justify-content: space-around;
+    line-height: 15vh;
+  }
+  header nav li {
+    padding: 0 1.5rem;
+  }
+  header nav li a {
+    font-size: 1.2rem;
+  }
+  header nav li:hover a {
+    border-bottom: solid black 1px;
+  }
+  header.container-fluid {
+    display: flex;
   }
 }
