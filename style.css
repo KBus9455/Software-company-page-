@@ -162,12 +162,21 @@ div.item img {
     font-size: 2rem;
   }
   div.item img {
-    width: 70%;
+    width: 80%;
   }
   div.productPhoto {
     text-align: center;
   }
-  div.aboutUsItem:nth-child(2) {
+  div.aboutUsItem {
     display: flex;
+    flex-direction: row;
+  }
+  div.reverse {
+    order: 2;
+  }
+  .aboutUsItem div {
+    width: 50%;
+    margin: 20px;
+    text-align: center;
   }
 }
