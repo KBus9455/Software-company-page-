@@ -4,7 +4,7 @@ btnMenu.addEventListener('click', function () {
   listMenu.classList.toggle('active');
 });
 
-const listCareers = [...document.querySelectorAll('table tr td')];
+const listCareers = [...document.querySelectorAll('table tr')];
 
 const modal = document.querySelector('.modal');
 let modalTitle = document.querySelector('.modal-title');
@@ -13,6 +13,7 @@ let modalContent = document.querySelector('.modal-body p');
 listCareers.forEach((item, index) => {
   item.addEventListener('click', () => {
     console.log(index - 1);
+    if (index === 0) return;
     modal.style.display = 'block';
     modalTitle.textContent = careersContent[index - 1].title;
     modalContent.textContent = careersContent[index - 1].content;
@@ -47,12 +48,12 @@ const careersContent = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat id, beatae fugiat cupiditate aliquam quis neque veniam eaque omnis soluta, consequuntur iusto nostrum libero exercitationem aperiam ex molestiae pariatur quos incidunt! Laboriosam autem odit consequatur fugit dignissimos alias, magnam soluta blanditiis dolores eligendi reiciendis deserunt nisi voluptatum doloremque neque quibusdam et obcaecati nostrum delectus natus non pariatur, at ab. Vitae dicta perferendis ab quibusdam. Iure veritatis iusto adipisci vero at sed veniam, ad odit, id eveniet dolore. Accusamus assumenda consectetur, dolorum tempora quas ipsa ab vero ea, facilis accusantium, eos explicabo commodi maxime nisi esse sequi perspiciatis totam nesciunt voluptatibus.',
   },
   {
-    title: 'Software Tester',
+    title: 'Frontend Developer',
     content:
       'Vivamus vehicula ante a dui ornare molestie. Sed quis leo et orci iaculis maximus vitae porta dui. Integer semper felis in commodo euismod. Aenean molestie orci nibh, et ultricies risus molestie vel. Sed tincidunt augue eu odio vestibulum cursus. Quisque dictum risus justo. Aliquam vitae mi eget nibh sagittis convallis. Donec vitae metus tortor. Suspendisse a pharetra nisi. Etiam dapibus massa vel felis ornare convallis. Aenean id est maximus, placerat nisi quis, lacinia diam. Nulla eu ornare quam. Nunc consequat sit amet ipsum at venenatis. Integer et justo et purus sagittis maximus.',
   },
   {
-    title: '.Project Manager',
+    title: 'Software Tester',
     content:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat id, beatae fugiat cupiditate aliquam quis neque veniam eaque omnis soluta, consequuntur iusto nostrum libero exercitationem aperiam ex molestiae pariatur quos incidunt! Laboriosam autem odit consequatur fugit dignissimos alias, magnam soluta blanditiis dolores eligendi reiciendis deserunt nisi voluptatum doloremque neque quibusdam et obcaecati nostrum delectus natus non pariatur, at ab. Vitae dicta perferendis ab quibusdam. Iure veritatis iusto adipisci vero at sed veniam, ad odit, id eveniet dolore. Accusamus assumenda consectetur, dolorum tempora quas ipsa ab vero ea, facilis accusantium, eos explicabo commodi maxime nisi esse sequi perspiciatis totam nesciunt voluptatibus.',
   },
