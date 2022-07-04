@@ -96,6 +96,9 @@ table th {
   padding: 5px 0;
   width: 33%;
 }
+table td {
+  cursor: pointer;
+}
 .careers img {
   max-width: 100%;
 }
@@ -148,6 +151,36 @@ form button {
 .social span {
   padding: 10px;
 }
+td.additionalInfromation.activeInformation {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 100;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+}
+td.additionalInfromation h4 {
+  width: 90%;
+}
+td.additionalInfromation i {
+  width: 10%;
+}
+td.additionalInfromation {
+  display: none;
+}
+i {
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  display: none;
+}
+
 @media (min-width: 821px) and (orientation: portrait) {
   .logo {
     font-size: 2rem;
@@ -263,10 +296,11 @@ form button {
   table {
     font-size: 1.2rem;
   }
-  table tr:hover {
+  /* table tr:hover {
     background-color: rgb(62, 62, 131);
     color: aliceblue;
-  }
+  } */
+
   .imgContainer {
     text-align: center;
     width: 100%;
